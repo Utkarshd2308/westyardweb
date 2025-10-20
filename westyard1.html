@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Westyard Agro LLP - Products</title>
+  <style>
+     * {
+      box-sizing: border-box;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .social-icons a {
+      margin: 5px;
+      text-align: center;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .instagram {
+      background: linear-gradient(to right, #feda75, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .phone{
+      background-color:white;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      margin: 0;
+    }
+
+    header {
+      background: #004444;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      background: #1f4f4f;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      box-sizing: border-box;
+      font-family :Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      padding: 20px;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+       text-align: left;
+    }
+
+    .sidebar select,
+    .sidebar input,
+    .sidebar button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .sidebar button {
+      background-color: #fff;
+      border: 2px solid #f1c40f;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+
+    .products {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
+    }
+
+    .product-card p {
+      font-size: 11px;
+      color: #888;
+      margin: 8px 0 5px;
+      text-transform: uppercase;
+    }
+
+    .product-card h4 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .product-card button {
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #20e806;
+      color: #0cec22;
+    }
+      .footer {
+      padding: 40px 20px;
+      color: #f9f9f9;
+      background-color: #1f4f4f;
+    }
+
+    .footer p.description {
+      max-width: 600px;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .subscribe-box {
+      display: flex;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .subscribe-box input {
+      flex: 1;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      outline: none;
+      border-radius: 30px 0 0 30px;
+    }
+
+    .subscribe-box button {
+      background-color: #f1c40f;
+      border: none;
+      color: black;
+      padding: 12px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 30px 30px 0;
+    }
+
+    footer.footer {
+      padding: 40px 20px;
+      background: #0e4040;
+      color: #f9f9f9;
+    }
+
+    .footer .description {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+   <div class="social-icons">
+    <a class="whatsapp" href="https://wa.me/918087724038" target="_blank">
+      <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-7.png" width="30" />
+    </a>
+    <a class="instagram" href="https://www.instagram.com/@utk__01" target="_blank">
+      <img src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" width="30" />
+    </a>
+    <a class="phone" href="tel:+918087724038">
+      <img src="https://www.pinclipart.com/picdir/big/10-106881_icons-symbol-handset-iphone-transprent-png-free-phone.png" width="30"/>
+    </a>
+  </div>
+
+  <header>
+    <div align="center">
+      <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" height="100" width="100" />
+    </div>
+    <h1>Westyard Agro LLP</h1>
+    <p>Fresh Carrot Manufacturer and Supplier</p>
+  </header>
+    <nav>
+    <a href="index.html">HOME</a>
+  </nav>
+  
+    <main class="products">
+      <div class="product-card">
+         <img src="https://www.relishthebite.com/wp-content/uploads/2015/01/mangoPickle-5.jpg" height="60%" alt="Chilli">
+        <h4>Pickle</h4>
+        <button><a href="pickle.html">View More</a></button>
+      </div>
+      <div class="product-card">
+       <img src="https://img2.exportersindia.com/product_images/bc-full/dir_132/3943455/cattle-feed-2321484.jpeg" height="60%" alt="Chilli">
+        <h4>Cattle Feed</h4>
+        <button><a href="Cattle feed.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/LN/BL/CE/40928938/spray-dried-custard-apple-powder-1000x1000.jpg" height="60%" alt="Chilli">
+        <h4>Custard Apple Powder</h4>
+        <button><a href="Custard-Apple-Powder.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.healthshots.com/healthshots/en/uploads/2023/01/06093913/jaggery.jpg" height="60%" alt="Chilli">
+        <h4>Jaggery</h4>
+        <button><a href="jaggery.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://bolnews.s3.amazonaws.com/wp-content/uploads/2020/07/Sugar-disadvantages.jpg" height="60%" alt="Chilli">
+        <h4>Sugar</h4>
+         <button><a href="sugar.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://wallpaperbat.com/img/867713-indian-spices-wallpaper.jpg" height="60%" alt="Chilli">
+        <h4>Spices</h4>
+         <button><a href="spices.html">View More</a></button>
+      </div>
+      <div class="product-card">
+         <img src="https://union.ces.ncsu.edu/wp-content/uploads/2020/10/askwell-wholegrains-superJumbo.jpg" height="60%" alt="Chilli">
+        <h4>Grains</h4>
+        <button><a href="grains.html">View More</a></button>
+      </div>
+      <div class="product-card">
+       <img src="https://thumbs.dreamstime.com/z/varieties-indian-pulses-crops-varieties-indian-pulses-crops-variation-grains-chickpeas-gram-158157521.jpg" height="60%" alt="Chilli">
+        <h4>Pulses</h4>
+        <button><a href="cereals.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://letswholesale.in/wp-content/uploads/2024/02/Maida-Loose-1-Kg.jpg" height="60%" alt="Chilli">
+        <h4>Maida</h4>
+        <button><a href="Maida.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://img.freepik.com/premium-photo/yam-white-isolated-background-ai-generated-image_532963-21579.jpg?w=2000" height="60%" alt="Chilli">
+        <h4>Yam (Suran)</h4>
+        <button><a href="Yam (Suran).html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.coracaoconfections.com/cdn/shop/files/CoconutMilkPowder.webp?v=1684949785" height="60%" alt="Chilli">
+        <h4>Coconut Powder</h4>
+        <button><a href="coconut powder.html">View More</a></button>
+      </div>
+      <div class="product-card">
+         <img src="https://herbtrue.com/wp-content/uploads/2019/07/Apple-Powder-1.jpg" height="60%" alt="Chilli">
+        <h4>Apple Powder</h4>
+        <button><a href="apple powder.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.awesomecuisine.com/wp-content/uploads/2012/05/bitter-gourd-in-a-basket.jpg" height="60%" alt="Chilli">
+        <h4>Bitter Gourd</h4>
+        <button><a href="bitter gourd.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" height="60%" alt="Chilli">
+        <h4>Tomato</h4>
+        <button><a href="tomato.html">View More</a></button>
+      </div>
+      <div class="product-card">
+        <img src="https://healthwire.pk/wp-content/uploads/2022/03/lady-finger-benefits.jpg" height="60%" alt="Chilli">
+        <h4>Lady Finger</h4>
+        <button><a href="ladie finger.html">View More</a></button>
+      </div>
+    </main>
+  </div>
+  <p style="color: #f9f9f9">
+   <footer class="footer">
+    <div align="center">
+    <p class="description">
+      Westyard Agro LLP is one of the top organization<br> manufacturing diverse collection of outstanding<br>
+      quality Masala and powder and also Leading Fresh<br> Vegetables and Fruits Exporters from India.
+    </p>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="Your Email">
+      <button>GO</button>
+    </div>
+    <hr>
+      <div align="center"><h3>©2025 Westyard Agro LLP.pvt ltd.<br> All Rights Reserved.</h3></div>
+  </footer>
+  </p>
+</body>
+</html>
