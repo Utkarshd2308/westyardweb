@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Westyard Agro LLP - Premium Blended Spices and Dry Shipments Exporter from India. 100% Pure, Natural, and Aromatic.">
+    <title>Blended Spices | Westyard Agro LLP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-teal: #004444;
+            --secondary-teal: #1f4f4f;
+            --spice-orange: #d35400;
+            --spice-gold: #f1c40f;
+            --light-bg: #fdfaf5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Floating Social Icons */
+        .social-icons {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+        .social-icons a {
+            padding: 10px;
+            margin: 2px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 5px 5px 0;
+            transition: 0.3s;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .whatsapp { background: #25D366; }
+        .instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf); }
+        .phone { background: #fff; border: 1px solid #ddd; }
+
+        header {
+            background: var(--primary-teal);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        header img { max-width: 100px; border-radius: 5px; }
+
+        nav {
+            background: var(--secondary-teal);
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Hero Section for Spices */
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/867713-indian-spices-wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-banner h1 { font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Intro Section */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .intro-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .intro-text h2 { color: var(--spice-orange); font-size: 2.2rem; margin-top: 0; }
+        .intro-text p { line-height: 1.8; color: #555; }
+
+        /* Why Choose Us Grid */
+        .section-title {
+            text-align: center;
+            color: var(--primary-teal);
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--spice-orange);
+            display: block;
+            margin: 10px auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: var(--spice-gold);
+        }
+        .feature-card img { width: 70px; margin-bottom: 20px; }
+        .feature-card h4 { color: var(--primary-teal); margin-bottom: 15px; font-size: 1.2rem; }
+
+        /* Footer */
+        footer {
+            background: #0e4040;
+            color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .subscribe-box {
+            display: flex;
+            max-width: 450px;
+            margin: 25px auto 40px;
+            background: white;
+            border-radius: 40px;
+            overflow: hidden;
+            padding: 5px;
+        }
+        .subscribe-box input { flex: 1; border: none; padding: 12px 20px; outline: none; }
+        .subscribe-box button { background: var(--spice-gold); border: none; padding: 12px 30px; font-weight: bold; border-radius: 40px; cursor: pointer; }
+
+        @media (max-width: 768px) {
+            .intro-grid { grid-template-columns: 1fr; }
+            .hero-banner h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="social-icons">
+        <a class="whatsapp" href="https://wa.me/918087724038" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25"></a>
+        <a class="instagram" href="https://www.instagram.com/@utk__01" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="25"></a>
+        <a class="phone" href="tel:+918087724038"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" width="25"></a>
+    </div>
+
+    <header>
+        <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" alt="Westyard Agro Logo">
+        <h1>Westyard Agro LLP</h1>
+        <p>Your Trusted Global Partner for Premium Agro Products</p>
+    </header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="westyard1.html">PRODUCTS</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="hero-banner">
+        <h1>Blended Spices & Dry Shipments</h1>
+    </div>
+
+    <div class="container">
+        <section class="intro-grid">
+            <div class="intro-image">
+                <img src="https://non-gmoreport.com/wp-content/uploads/2020/05/Bags-of-grains.jpg" alt="Agro Grains and Spices">
+            </div>
+            <div class="intro-text">
+                <h2>The Essence of Quality</h2>
+                <p><b>Westyard Agro,</b> offers expertly sourced dry shipments that bring quality and convenience to kitchens worldwide. Each product—from nutrient-rich legumes and grains to fragrant seeds—is selected with the utmost care.</p>
+                <p>Our blended spices and dry goods are processed to preserve their natural flavor, ensuring that every meal you prepare is authentic and nourishing. We believe in purity, which is why our products are free from artificial additives and preservatives.</p>
+                <p>Whether it's a bulk shipment for a distributor or premium packs for retail, we ensure consistent quality that meets international standards.</p>
+            </div>
+        </section>
+
+        <h3 class="section-title">WHY CHOOSE WESTYARD AGRO</h3>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3501/3501142.png" alt="Quality">
+                <h4>Premium Quality</h4>
+                <p>Sourced directly from selected farms to ensure the highest grade of grains and spices.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2855/2855230.png" alt="Global">
+                <h4>Global Logistics</h4>
+                <p>Efficient supply chain ensuring timely delivery to any corner of the globe.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3050/3050212.png" alt="Pure">
+                <h4>100% Natural</h4>
+                <p>No artificial colors or preservatives. Just pure, natural goodness in every pack.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3145/3145217.png" alt="Support">
+                <h4>Customer Centric</h4>
+                <p>Tailored solutions and reliable support for all our B2B and retail partners.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Westyard Agro LLP</strong> - Leading Manufacturer & Exporter of Masala Powders, Fresh Vegetables, and Premium Grains.</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter your email for updates">
+                <button>GO</button>
+            </div>
+            <hr style="opacity: 0.2;">
+            <p>© 2026 Westyard Agro LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
