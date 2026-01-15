@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Westyard Agro LLP - Exporter of Fresh Tomatoes from India. Organic, High Lycopene, Premium Quality.">
+  <title>Fresh Tomato | Westyard Agro LLP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #004444;
+      padding: 15px 10px;
+      color: white;
+      text-align: center;
+    }
+
+    header img { max-width: 90px; height: auto; }
+
+    nav {
+      background: #1f4f4f;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Social Icons - Optimized for Mobile */
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1001;
+    }
+
+    .social-icons a {
+      margin: 4px 0;
+      padding: 8px;
+      background: white;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .whatsapp { background-color: #25D366 !important; }
+    .instagram { background: linear-gradient(to right, #feda75, #d62976, #962fbf, #4f5bd5) !important; }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    /* Product Card */
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .left-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .right-section {
+      flex: 1.2;
+      padding: 25px;
+      min-width: 300px;
+    }
+
+    .right-section h1 { font-size: 32px; margin: 0 0 10px; color: #d32f2f; }
+    .right-section h2 { font-size: 18px; color: #015f21; margin-top: 20px; }
+    .right-section p { line-height: 1.6; color: #444; font-size: 15px; }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons a { text-decoration: none; flex: 1; }
+
+    .buttons button {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buttons .yellow { background-color: #f4c542; border: none; }
+
+    /* Info Table Grid */
+    .product-box {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .product-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .info-column { text-align: center; }
+    .label { color: #888; font-size: 13px; text-transform: uppercase; }
+    .value { color: #222; font-size: 16px; font-weight: bold; margin-top: 5px; }
+
+    .section-box ul { padding-left: 20px; color: #444; line-height: 1.8; }
+
+    /* Slider Styles */
+    .slider-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #f9f9f9;
+      border-radius: 12px;
+      margin: 30px 0;
+      padding: 20px 0;
+    }
+
+    .slider-wrapper { display: flex; transition: transform 0.5s ease; }
+
+    .slide {
+      min-width: 100%;
+      text-align: center;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .prev-button, .next-button {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.5); color: white; border: none;
+      width: 40px; height: 40px; cursor: pointer; border-radius: 50%; z-index: 10;
+    }
+    .next-button { right: 10px; }
+    .prev-button { left: 10px; }
+
+    /* Footer */
+    footer {
+      padding: 40px 20px;
+      background: #0e4040;
+      color: #fff;
+      text-align: center;
+    }
+
+    .subscribe-box {
+      display: flex;
+      max-width: 400px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .subscribe-box input { flex: 1; border: none; padding: 12px 20px; outline: none; }
+    .subscribe-box button { background: #f1c40f; border: none; padding: 0 20px; font-weight: bold; }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .right-section h1 { font-size: 26px; }
+      .buttons { flex-direction: column; }
+      .social-icons { top: auto; bottom: 20px; left: 10px; flex-direction: row; transform: none; }
+      .social-icons a { border-radius: 50%; margin: 0 5px; }
+      .left-section { height: 250px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="social-icons">
+    <a class="whatsapp" href="https://wa.me/918087724038" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-7.png" width="25" /></a>
+    <a class="instagram" href="https://www.instagram.com/@utk__01" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" width="25" /></a>
+    <a class="phone" href="tel:+918087724038"><img src="https://www.pinclipart.com/picdir/big/10-106881_icons-symbol-handset-iphone-transprent-png-free-phone.png" width="25" /></a>
+  </div>
+
+  <header>
+    <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" alt="Logo" />
+    <h1>Westyard Agro LLP</h1>
+    <p>Premium Fresh Vegetables Exporter</p>
+  </header>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="westyard1.html">PRODUCTS</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="left-section">
+        <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" alt="Fresh Tomato">
+      </div>
+      <div class="right-section">
+        <h1>Fresh Tomato</h1>
+        <p><strong>Business:</strong> Manufacturer, Exporter, Supplier</p>
+        <p><strong>Color:</strong> Vibrant Red</p>
+        <h2>Short Description</h2>
+        <p>Experience the rich, juicy flavor of Fresh Tomatoes from Westyard Agro. Harvested at peak ripeness, our tomatoes are packed with Vitamin C and Lycopene. Perfect for salads, sauces, and gourmet cooking.</p>
+        <p><strong>📍 Export:</strong> <span>Global Delivery Available</span></p>
+        <div class="buttons">
+          <a href="tel:+918087724038"><button>CALL US</button></a>
+          <a href="mailto:info@westyardagro.com?subject=Tomato Enquiry"><button class="yellow">SEND ENQUIRY</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-box">
+      <h2>Technical Specifications</h2>
+      <div class="product-info">
+        <div class="info-column">
+          <div class="label">Packaging</div>
+          <div class="value">Corrugated Box / Crates</div>
+        </div>
+        <div class="info-column">
+          <div class="label">Cultivation</div>
+          <div class="value">Organic / Hybrid</div>
+        </div>
+        <div class="info-column">
+          <div class="label">Grade</div>
+          <div class="value">Premium Export</div>
+        </div>
+        <div class="info-column">
+          <div class="label">Season</div>
+          <div class="value">Year-round</div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h2>Detailed Description</h2>
+        <p><strong>Varieties:</strong> Arka Rakshak, Pusa Ruby, and Heirloom varieties.</p>
+        <p><strong>Regions:</strong> Maharashtra, Karnataka, Andhra Pradesh, Gujarat.</p>
+        <p><strong>Export Packs:</strong> 2kg, 5kg, 10kg, 20kg Net Weight.</p>
+        <ul>
+          <li>Handpicked for uniform size and firm texture.</li>
+          <li>Rich in antioxidants and potassium.</li>
+          <li>Cold-chain supported logistics for maximum freshness.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="text-align:center; margin-top:40px;">Related Products</h2>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slide">
+          <img src="https://bolnews.s3.amazonaws.com/wp-content/uploads/2020/07/Sugar-disadvantages.jpg" alt="Sugar">
+          <h3>Sugar</h3>
+          <a href="sugar.html"><button style="padding:8px 20px; border-radius:20px; border:1px solid #007BFF; background:none; cursor:pointer;">View</button></a>
+        </div>
+        <div class="slide">
+          <img src="https://wallpaperbat.com/img/867713-indian-spices-wallpaper.jpg" alt="Spices">
+          <h3>Spices</h3>
+          <a href="spices.html"><button style="padding:8px 20px; border-radius:20px; border:1px solid #007BFF; background:none; cursor:pointer;">View</button></a>
+        </div>
+        <div class="slide">
+          <img src="https://union.ces.ncsu.edu/wp-content/uploads/2020/10/askwell-wholegrains-superJumbo.jpg" alt="Grains">
+          <h3>Grains</h3>
+          <a href="grains.html"><button style="padding:8px 20px; border-radius:20px; border:1px solid #007BFF; background:none; cursor:pointer;">View</button></a>
+        </div>
+      </div>
+      <button class="prev-button">&#10094;</button>
+      <button class="next-button">&#10095;</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Westyard Agro LLP - Exporting India's Finest Fresh Produce.</p>
+    <div class="subscribe-box">
+      <input type="email" placeholder="Enter Email" />
+      <button>GO</button>
+    </div>
+    <hr style="opacity:0.2">
+    <p>©2026 Westyard Agro LLP. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const wrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    const next = document.querySelector('.next-button');
+    const prev = document.querySelector('.prev-button');
+    let index = 0;
+
+    function move() {
+      wrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      move();
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      move();
+    });
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      move();
+    }, 4000);
+  </script>
+</body>
+</html>

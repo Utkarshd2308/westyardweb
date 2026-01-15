@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Powder | Westyard Agro LLP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+        }
+
+        header {
+            background: #004444;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 90px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        nav {
+            background: #1f4f4f;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #f1c40f; }
+
+        /* Social Icons */
+        .social-icons {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1001;
+        }
+
+        .social-icons a {
+            margin: 5px 0;
+            padding: 10px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp { background-color: #25D366 !important; }
+        .instagram { background: linear-gradient(to right, #feda75, #d62976, #962fbf, #4f5bd5) !important; }
+
+        /* Product Intro Section */
+        .blended-spices-intro {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .image-gallery {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .text-content {
+            flex: 1.5;
+            min-width: 320px;
+        }
+
+        .text-content h2 {
+            color: #2e7d32;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #f1c40f;
+            display: inline-block;
+        }
+
+        .text-content p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background-color: #f1f8e9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-choose-us h3 {
+            color: #004444;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            color: #2e7d32;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Footer Styles */
+        footer.footer {
+            padding: 50px 20px;
+            background: #0e4040;
+            color: #f9f9f9;
+            text-align: center;
+        }
+
+        .subscribe-box {
+            display: flex;
+            max-width: 450px;
+            margin: 20px auto 40px;
+            background-color: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .subscribe-box input {
+            flex: 1;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .subscribe-box button {
+            background-color: #f1c40f;
+            border: none;
+            color: #000;
+            padding: 0 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .subscribe-box button:hover { background-color: #d4ac0d; }
+
+        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0; }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 768px) {
+            .text-content h2 { font-size: 1.8rem; }
+            .social-icons { top: auto; bottom: 10px; left: 10px; flex-direction: row; transform: none; }
+            .social-icons a { border-radius: 50%; margin: 0 5px; width: 45px; height: 45px; }
+            .content-wrapper { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="social-icons">
+        <a class="whatsapp" href="https://wa.me/918087724038" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-7.png" width="25" /></a>
+        <a class="instagram" href="https://www.instagram.com/@utk__01" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" width="25" /></a>
+        <a class="phone" href="tel:+918087724038"><img src="https://www.pinclipart.com/picdir/big/10-106881_icons-symbol-handset-iphone-transprent-png-free-phone.png" width="25" /></a>
+    </div>
+
+    <header>
+        <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" alt="Westyard Agro Logo">
+        <h1>Westyard Agro LLP</h1>
+        <p>Your Trusted Partner in Pure & Healthy Processed Foods</p>
+    </header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="westyard1.html">PRODUCTS</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <section class="blended-spices-intro">
+        <div class="container content-wrapper">
+            <div class="image-gallery">
+                <img src="https://avnifoods.in/assets/images/powder2.jpg" alt="High-quality Vegetable Powder">
+            </div>
+            <div class="text-content">
+                <h2>Vegetable Powder</h2>
+                <p><b>Westyard Agro</b> च्या व्हेजिटेबल पावडर (भाजीपाला पावडर) तुमच्या आहारात ताज्या भाज्यांचे पोषण समाविष्ट करण्याचा एक सोपा आणि आधुनिक मार्ग आहे. अत्यंत काळजीपूर्वक निवडलेल्या उच्च दर्जाच्या भाज्यांपासून तयार केलेली आमची पावडर भाज्यांचा मूळ स्वाद, नैसर्गिक रंग आणि आवश्यक पोषक तत्वे टिकवून ठेवते.</p>
+                <p>आमची पावडर सूप, सॉस, स्मूदी आणि बेकरी उत्पादनांमध्ये वापरण्यासाठी अत्यंत सोयीस्कर आहे. जीवनसत्त्वे (Vitamins), खनिजे (Minerals) आणि फायबरने समृद्ध असलेली ही पावडर तुमची रोगप्रतिकारक शक्ती वाढवण्यास मदत करते.</p>
+                <p>वेस्टयार्ड ॲग्रोमध्ये आम्ही शुद्धता आणि गुणवत्तेला सर्वोच्च प्राधान्य देतो. आमची उत्पादने कोणत्याही कृत्रिम रंग किंवा प्रिझर्व्हेटिव्ह्जशिवाय तयार केली जातात. शेतातल्या ताज्या भाज्यांचा नैसर्गिक स्वाद थेट तुमच्या ताटापर्यंत पोहोचवण्यासाठी तुम्ही आमच्यावर विश्वास ठेवू शकता.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h3>WHY CHOOSE US</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-09.webp" alt="Quality">
+                    <h4>Premium Quality</h4>
+                    <p>निवडक शेतातून घेतलेल्या ताज्या मालावर प्रक्रिया करून आम्ही जागतिक दर्जाची शुद्धता सुनिश्चित करतो.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-10.webp" alt="Global">
+                    <h4>Global Reach</h4>
+                    <p>आमचे जाळे जगभर पसरलेले असून आम्ही वेळेत आणि सुरक्षित डिलिव्हरीची हमी देतो.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-11.webp" alt="Range">
+                    <h4>Wide Product Range</h4>
+                    <p>प्रक्रिया केलेल्या अन्नामध्ये आमच्याकडे विविध पर्याय उपलब्ध आहेत जे तुमच्या स्वयंपाकाची चव वाढवतात.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-12.webp" alt="Sustainability">
+                    <h4>Eco-Friendly</h4>
+                    <p>आम्ही शाश्वत शेतीला प्रोत्साहन देतो, ज्यामुळे पर्यावरणाचे रक्षण होते आणि ग्राहकांना पौष्टिक अन्न मिळते.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-13.webp" alt="Supply Chain">
+                    <h4>Reliable Logistics</h4>
+                    <p>आमची पॅकेजिंग पद्धत मालाचा ताजेपणा टिकवून ठेवते, जेणेकरून उत्पादन तुमच्यापर्यंत सुरक्षित पोहोचेल.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-ilcifnl.nitrocdn.com/RjgOjLgsUWCSGlGGFRwwYqViUnDhvhge/assets/images/optimized/rev-445b199/westyardagro.com/wp-content/uploads/2024/10/icon1-14.webp" alt="Customer">
+                    <h4>Customer Centric</h4>
+                    <p>ग्राहकांचे समाधान हेच आमचे ध्येय आहे. आम्ही तुमच्या गरजेनुसार कस्टमाइज्ड सोल्यूशन्स देतो.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="description">
+                Westyard Agro LLP: आम्ही भारतातील मसाला पावडरचे प्रमुख उत्पादक आणि ताज्या फळे-भाज्यांचे जागतिक निर्यातदार आहोत.
+            </div>
+
+            <div class="subscribe-box">
+                <input type="email" placeholder="Subscribe for updates..." />
+                <button>GO</button>
+            </div>
+            
+            <hr>
+            <p>© 2026 Westyard Agro LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

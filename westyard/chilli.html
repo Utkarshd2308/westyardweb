@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Westyard Agro LLP - Premium Exporter of Fresh Green Chilli from India. Spicy, Organic, and Nutrient-rich.">
+  <title>Fresh Green Chilli | Westyard Agro LLP</title>
+  <style>
+    :root {
+      --primary-color: #004444;
+      --secondary-color: #1f4f4f;
+      --accent-color: #f4c542;
+      --text-gray: #555;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Floating Social Icons */
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    .social-icons a {
+      margin: 2px 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      border-radius: 0 5px 5px 0;
+      transition: 0.3s;
+    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .phone { background: #fff; border: 1px solid #ddd; }
+
+    header {
+      background: var(--primary-color);
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    header img { max-width: 120px; margin-bottom: 10px; }
+
+    nav {
+      background: var(--secondary-color);
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .image-box {
+      flex: 1;
+      min-width: 300px;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .image-box img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .info-box {
+      flex: 1.2;
+      padding: 40px;
+    }
+    .info-box h1 {
+      font-size: 36px;
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    .info-box h2 { color: #015f21; font-size: 20px; }
+
+    .btn-group {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+    }
+    .btn {
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-call { background: var(--primary-color); color: white; }
+    .btn-inquiry { background: var(--accent-color); color: #000; }
+    .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    /* Specification Grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      background: #f4fbf4;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+    .spec-item b { display: block; color: var(--primary-color); text-transform: uppercase; font-size: 12px; }
+    .spec-item span { font-size: 16px; font-weight: 500; }
+
+    /* Related Products Slider */
+    .slider-container {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .slider-wrapper { display: flex; transition: 0.5s ease; }
+    .slide { min-width: 100%; padding: 40px; text-align: center; box-sizing: border-box; }
+    .slide img { height: 180px; object-fit: contain; margin-bottom: 15px; }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .next { right: 10px; } .prev { left: 10px; }
+
+    footer {
+      background: #0e4040;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .subscribe {
+      display: flex;
+      max-width: 400px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    .subscribe input { flex: 1; border: none; padding: 15px; outline: none; }
+    .subscribe button { background: var(--accent-color); border: none; padding: 0 25px; font-weight: bold; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      .info-box { padding: 25px; }
+      .social-icons { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="social-icons">
+    <a href="https://wa.me/918087724038" class="whatsapp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25"></a>
+    <a href="#" class="instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="25"></a>
+    <a href="tel:+918087724038" class="phone"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" width="25"></a>
+  </div>
+
+  <header>
+    <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" alt="Westyard Agro Logo">
+    <h1>Westyard Agro LLP</h1>
+    <p>Premium Exporter of Indian Green Chillies</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="westyard1.html">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=600&q=80" alt="Fresh Green Chilli">
+      </div>
+      <div class="info-box">
+        <h1>Fresh Green Chilli</h1>
+        <h2>Bursting with Pungency & Freshness</h2>
+        <p>Experience the fiery, vibrant heat of Fresh Green Chilli by Westyard Agro. Carefully handpicked from India's richest agricultural belts, our chillies are known for their crisp texture, bold zesty kick, and nutritional value.</p>
+        
+        <div class="spec-item">
+          <b>Export Availability:</b>
+          <span>All Countries (Except India)</span>
+        </div>
+
+        <div class="btn-group">
+          <a href="tel:+918087724038" class="btn btn-call">REQUEST A CALL</a>
+          <a href="mailto:info@westyardagro.com?subject=Chilli Export Inquiry" class="btn btn-inquiry">SEND ENQUIRY</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-item"><b>Varieties</b><span>G4, Jwala, Byadgi (Green)</span></div>
+      <div class="spec-item"><b>Size</b><span>6cm to 12cm Length</span></div>
+      <div class="spec-item"><b>Cultivation</b><span>100% Organic / Natural</span></div>
+      <div class="spec-item"><b>Color</b><span>Glossy Bright Green</span></div>
+      <div class="spec-item"><b>Packaging</b><span>Vacuum Pouches, Corrugated Boxes</span></div>
+      <div class="spec-item"><b>Season</b><span>Available Year-Round</span></div>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h2>Detailed Description</h2>
+      <p>Our green chillies are rich in <b>Capsaicin</b>, known for anti-inflammatory and metabolism-boosting properties. We ensure a seamless supply chain from Maharashtra, Guntur (Andhra Pradesh), and Karnataka to the global market, maintaining the cold chain to preserve the "just-picked" freshness.</p>
+      
+      <h3>Packaging Weight Options:</h3>
+      <ul>
+        <li>2 KG / 5 KG (Retail Friendly)</li>
+        <li>10 KG / 20 KG (Bulk Export)</li>
+        <li>Custom weight as per buyer preference</li>
+      </ul>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 60px;">Explore Related Products</h2>
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider">
+        <div class="slide">
+          <img src="https://cdn-icons-png.flaticon.com/512/2610/2610738.png" alt="Sugar">
+          <h3>Refined Sugar</h3>
+          <p>Premium Grocery Grade - Dry Shipment</p>
+          <a href="sugar.html" class="btn btn-call">View More</a>
+        </div>
+        <div class="slide">
+          <img src="https://cdn-icons-png.flaticon.com/512/3601/3601734.png" alt="Spices">
+          <h3>Indian Spices</h3>
+          <p>Turmeric, Cumin & Red Chilli Powder</p>
+          <a href="spices.html" class="btn btn-call">View More</a>
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="description">
+      <strong>Westyard Agro LLP</strong><br>
+      Leading Manufacturer of Masala Powders & Global Exporter of Fresh Produce.
+    </div>
+    <div class="subscribe">
+      <input type="email" placeholder="Enter Your Email">
+      <button>GO</button>
+    </div>
+    <hr style="opacity: 0.1; margin: 30px 0;">
+    <p>© 2026 Westyard Agro LLP. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    let current = 0;
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+
+    function moveSlide(n) {
+      current = (current + n + slides.length) % slides.length;
+      slider.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+
+</body>
+</html>

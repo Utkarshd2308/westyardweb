@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Westyard Agro LLP - Exporter of Cold-Pressed Juices, Garlic Paste, and Pickles from India. 100% Natural, No Preservatives.">
+  <title>Fresh Pomegranate | Westyard Agro LLP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #004444;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Logo responsive */
+    header img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    nav {
+      background: #1f4f4f;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      display: inline-block; /* Mobile touch friendly */
+      padding: 5px;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .social-icons a {
+      margin: 5px;
+      text-align: center;
+      padding: 5px;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .whatsapp { background-color: #25D366; }
+    .instagram { background: linear-gradient(to right, #feda75, #d62976, #962fbf, #4f5bd5); }
+    .phone { background-color:white; border: 1px solid #ddd; }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    .card {
+      display: flex;
+      flex-wrap: wrap; /* Responsive wrap */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .left-section {
+      flex: 1;
+      min-width: 280px; /* Mobile minimum */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-section img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .right-section {
+      flex: 1.5;
+      padding: 15px;
+      min-width: 280px;
+    }
+
+    .right-section h2 {
+      font-size: 20px;
+      color: #015f21;
+      margin: 15px 0 5px;
+    }
+
+    .right-section h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .right-section p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+      border-radius: 20px;
+      font-weight: bold;
+      flex: 1; /* Full width on small mobile */
+      min-width: 150px;
+    }
+
+    .buttons .yellow { background-color: #f4c542; border: none; }
+
+    .product-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+
+    .info-column {
+      flex: 1;
+      min-width: 140px;
+      text-align: left;
+    }
+
+    .label { color: #888; font-size: 14px; }
+    .value { color: #000; font-size: 16px; font-weight: 500; margin-top: 5px; }
+
+    /* Slider styling responsive */
+    .slider-container {
+      width: 100%;
+      margin: 20px auto;
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .slider-wrapper { display: flex; transition: transform 0.5s ease-in-out; }
+    .slide { min-width: 100%; padding: 10px; text-align: center; }
+    .slide img { max-width: 100%; height: 180px; object-fit: contain; margin-bottom: 10px; }
+
+    .prev-button, .next-button {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5); color: white; border: none;
+      padding: 10px 15px; cursor: pointer; border-radius: 50%; z-index: 10;
+    }
+    .next-button { right: 5px; }
+    .prev-button { left: 5px; }
+
+    footer.footer {
+      padding: 30px 15px;
+      background: #0e4040;
+      color: #f9f9f9;
+      text-align: center;
+    }
+
+    .subscribe-box {
+      display: flex;
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .subscribe-box input { flex: 1; border: none; padding: 12px; outline: none; }
+    .subscribe-box button { background-color: #f1c40f; border: none; padding: 0 20px; font-weight: bold; }
+
+    /* Mobile specific adjustments */
+    @media (max-width: 600px) {
+      .social-icons { top: auto; bottom: 10px; left: 10px; flex-direction: row; transform: none; }
+      .right-section h1 { font-size: 24px; }
+      .right-section { padding-left: 0; }
+      nav a { margin: 0 5px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="social-icons">
+    <a class="whatsapp" href="https://wa.me/918087724038" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-7.png" width="25" /></a>
+    <a class="instagram" href="https://www.instagram.com/@utk__01" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" width="25" /></a>
+    <a class="phone" href="tel:+918087724038"><img src="https://www.pinclipart.com/picdir/big/10-106881_icons-symbol-handset-iphone-transprent-png-free-phone.png" width="25" /></a>
+  </div>
+
+  <header>
+    <img src="https://dynamic.exportersindia.com/company_logo/694226.jpg" alt="Logo" />
+    <h1>Westyard Agro LLP</h1>
+    <p>Premium Fresh Pomegranate Exporter</p>
+  </header>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="westyard1.html">PRODUCTS</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="left-section">
+        <img src="https://freepngimg.com/thumb/pomegranate/1-2-pomegranate-free-png-image.png" alt="Fresh Pomegranate">
+      </div>
+      <div class="right-section">
+        <h1>Fresh Pomegranate</h1>
+        <div class="details">
+          <p><strong>Business Type:</strong> Manufacturer, Exporter, Supplier</p>
+          <p><strong>Cultivation Type:</strong> Organic</p>
+          <p><strong>Shelf Life:</strong> 5-7 Days</p>
+          <p><strong>Application:</strong> Making Juice / Fresh Eating</p>
+        </div>
+        <h2>Short Description</h2>
+        <p>Experience the sweet, tangy burst of flavor from Fresh Pomegranates by Westyard Agro. Vibrant red arils and juicy texture make them ideal for snacking, juicing, or salads.</p>
+        <p><strong>📍 Location:</strong> <span>Global Export Available</span></p>
+        <div class="buttons">
+          <a href="tel:+918087724038"><button>REQUEST A CALL</button></a>
+          <a href="mailto:info@westyardagro.com?subject=Enquiry"><button class="yellow">SEND ENQUIRY</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-box">
+      <h2>Product Details</h2>
+      <div class="product-info">
+        <div class="info-column">
+          <div class="label">Maturity:</div>
+          <div class="value">100%</div>
+        </div>
+        <div class="info-column">
+          <div class="label">Feature:</div>
+          <div class="value">A Grade Premium</div>
+        </div>
+      </div>
+
+      <div class="section-box description">
+        <h2>Product Description</h2>
+        <p><strong>Pomegranate Varieties Exported:</strong> Bhagwa, Ganesh, Arakta, and Ruby.</p>
+        <p><strong>Packaging Options:</strong> Corrugated Boxes, Plastic Crates (5kg, 10kg, 20kg).</p>
+        <ul>
+          <li><strong>Color:</strong> Bright red to deep maroon skin.</li>
+          <li><strong>Season:</strong> September to February.</li>
+          <li><strong>Specialty:</strong> Rich in Vitamin C & Antioxidants.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;"><h2>Related Products</h2></div>
+
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slide">
+          <img src="https://bolnews.s3.amazonaws.com/wp-content/uploads/2020/07/Sugar-disadvantages.jpg" alt="Sugar">
+          <h3>Sugar</h3>
+          <button class="view-more-button"><a href="sugar.html" style="color:white; text-decoration:none;">View More</a></button>
+        </div>
+        <div class="slide">
+          <img src="https://wallpaperbat.com/img/867713-indian-spices-wallpaper.jpg" alt="Spices">
+          <h3>Spices</h3>
+          <button class="view-more-button"><a href="spices.html" style="color:white; text-decoration:none;">View More</a></button>
+        </div>
+      </div>
+      <button class="prev-button">&#10094;</button>
+      <button class="next-button">&#10095;</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="description">Westyard Agro LLP - Top Manufacturer & Exporter from India.</div>
+    <div class="subscribe-box">
+      <input type="email" placeholder="Your Email" />
+      <button>GO</button>
+    </div>
+    <p>©2026 Westyard Agro LLP. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sliderWrapper = document.querySelector('.slider-wrapper');
+      const slides = document.querySelectorAll('.slide');
+      const prevButton = document.querySelector('.prev-button');
+      const nextButton = document.querySelector('.next-button');
+      let currentIndex = 0;
+
+      function updateSlider() {
+        sliderWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
+      }
+
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      });
+
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
